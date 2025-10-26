@@ -7,6 +7,8 @@ import {
     IconSignature,
     IconTableColumn,
 } from "@tabler/icons-react";
+import { FaLocationArrow } from "react-icons/fa";
+import MagicButton from "../ui/magic-button";
 
 export const gridItems = [
     {
@@ -75,56 +77,64 @@ export const gridItems = [
 const Contact = () => {
     return (
         <div>
-            <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
-                {items.map((item, i) => (
-                    <BentoGridItem
-                        key={i}
-                        title={item.title}
-                        description={item.description}
-                        header={item.header}
-                        className={item.className}
-                        icon={item.icon}
-                    />
-                ))}
-            </BentoGrid>
+            <footer className="w-full  pb-5" id="contact">
+                <div className="flex flex-col items-center">
+                    <h1 className="heading lg:max-w-[45vw]">
+                        Ready to take <span className="text-purple">your</span>{" "}
+                        digital presence to the next level?
+                    </h1>
+                    <p className="text-white-200 md:mt-10 my-5 text-center">
+                        Reach out to me today and let&apos;s discuss how I can
+                        help you achieve your goals.
+                    </p>
+                    <a href="mailto:abdullahdev001@gmail.com">
+                        <MagicButton
+                            title="Let's get in touch"
+                            icon={<FaLocationArrow />}
+                            position="right"
+                        />
+                    </a>
+                </div>
+                <div className="flex mt-16 bg-[url(/footer-grid.svg)] md:flex-row flex-col justify-between items-center">
+                    <p className="md:text-base text-sm md:font-normal font-light">
+                        Copyright © 2024 Abdullah
+                    </p>
+
+                    <div className="flex items-center mt-3 md:gap-3 gap-6">
+                        {socialMedia.map((info) => (
+                            <a key={info.id} href={info.link}>
+                                <div className="w-10 h-10 overflow-x-auto cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300">
+                                    <img
+                                        src={info.img}
+                                        alt="icons"
+                                        width={20}
+                                        height={20}
+                                    />
+                                </div>
+                            </a>
+                        ))}
+                    </div>
+                </div>
+            </footer>
         </div>
     );
 };
 
 export default Contact;
-
-const Skeleton = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl   dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black"></div>
-);
-const items = [
-  {
-    title: "The Dawn of Innovation",
-    description: "Explore the birth of groundbreaking ideas and inventions.",
-    header: <Skeleton />,
-    className: "md:col-span-2",
-    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "The Digital Revolution",
-    description: "Dive into the transformative power of technology.",
-    header: <Skeleton />,
-    className: "md:col-span-1",
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "The Art of Design",
-    description: "Discover the beauty of thoughtful and functional design.",
-    header: <Skeleton />,
-    className: "md:col-span-1",
-    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "The Power of Communication",
-    description:
-      "Understand the impact of effective communication in our lives.",
-    header: <Skeleton />,
-    className: "md:col-span-2",
-    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
-  },
+export const socialMedia = [
+    {
+        id: 1,
+        link: "https://github.com/abdullah0Dev/",
+        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/1024px-GitHub_Invertocat_Logo.svg.png",
+    },
+    {
+        id: 2,
+        link: "https://wa.me/+201011245872?text=Hello%20Abdullah!",
+        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/WhatsApp_Logo_green.svg/1024px-WhatsApp_Logo_green.svg.png",
+    },
+    {
+        id: 3,
+        link: "https://www.linkedin.com/in/abdullah1dev/",
+        img: "https://cdn-icons-png.flaticon.com/512/3955/3955056.png",
+    },
 ];
-

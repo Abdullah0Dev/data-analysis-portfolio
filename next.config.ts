@@ -25,6 +25,10 @@ const nextConfig: NextConfig = {
                 protocol: "https",
                 hostname: "boostlabs.com",
             },
+            {
+                protocol: "https",
+                hostname: "cdn-icons-png.flaticon.com",
+            },
         ],
     },
 };
