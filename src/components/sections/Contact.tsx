@@ -1,14 +1,12 @@
 import React from "react";
-import { cn } from "@/lib/utils";
-import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
-import {
-    IconClipboardCopy,
-    IconFileBroken,
-    IconSignature,
-    IconTableColumn,
-} from "@tabler/icons-react";
+import DottedGlowBackground from "@/components/ui/dotted-glow-background";
+
 import { FaLocationArrow } from "react-icons/fa";
 import MagicButton from "../ui/magic-button";
+import { TextHoverEffect } from "../ui/text-hover-effect";
+import Footer from "./Footer";
+import Image from "next/image";
+import { CONTACT_ADDRESS, contactData, OWNER_NAME, socialMedia } from "@/constants";
 
 export const gridItems = [
     {
@@ -76,65 +74,70 @@ export const gridItems = [
 
 const Contact = () => {
     return (
-        <div>
-            <footer className="w-full  pb-5" id="contact">
-                <div className="flex flex-col items-center">
-                    <h1 className="heading lg:max-w-[45vw]">
-                        Ready to take <span className="text-purple">your</span>{" "}
-                        digital presence to the next level?
-                    </h1>
-                    <p className="text-white-200 md:mt-10 my-5 text-center">
-                        Reach out to me today and let&apos;s discuss how I can
-                        help you achieve your goals.
-                    </p>
-                    <a href="mailto:abdullahdev001@gmail.com">
-                        <MagicButton
-                            title="Let's get in touch"
-                            icon={<FaLocationArrow />}
-                            position="right"
-                        />
-                    </a>
-                </div>
-                <div className="flex mt-16 bg-[url(/footer-grid.svg)] md:flex-row flex-col justify-between items-center">
-                    <p className="md:text-base text-sm md:font-normal font-light">
-                        Copyright © 2024 Abdullah
-                    </p>
-
-                    <div className="flex items-center mt-3 md:gap-3 gap-6">
-                        {socialMedia.map((info) => (
-                            <a key={info.id} href={info.link}>
-                                <div className="w-10 h-10 overflow-x-auto cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300">
-                                    <img
-                                        src={info.img}
-                                        alt="icons"
-                                        width={20}
-                                        height={20}
-                                    />
-                                </div>
+        <div className="">
+            <div className="z-10 mt-12" id="contact">
+                <TextHoverEffect text="CONTACT" />
+            </div>
+            <div className="relative overflow-hidden">
+                <footer className="w-full pb-5" id="contact">
+                    <div className="flex flex-col items-center py-16">
+                        <h1 className="heading lg:max-w-[45vw]">
+                           {contactData.title.beforeHeighLight}{" "}
+                            <span className="text-[#CBACF9]">{contactData.title.heighLight}</span> {contactData.title.afterHeighLight}
+                        </h1>
+                        <p className="custom-backdrop-blur  z-10 lg:max-w-[45vw] md:mt-10 my-5 text-center">
+                           {contactData.subTitle}
+                        </p>
+                        <div className="relative z-10">
+                            <a href={CONTACT_ADDRESS}>
+                                <MagicButton
+                                    title="Let's get in touch"
+                                    icon={<FaLocationArrow />}
+                                    position="right"
+                                />
                             </a>
-                        ))}
+                        </div>
                     </div>
-                </div>
-            </footer>
+                    <div className="flex  px-5 mt-16 md:flex-row flex-col max-md:mb-5 justify-between items-center">
+                        <p className="md:text-base text-sm md:font-normal font-light">
+                            Copyright © 2025 {OWNER_NAME}
+                        </p>
+                        <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
+                            <Footer />
+                        </div>
+                        <div className="flex items-center mt-3 md:gap-3 gap-6">
+                            {socialMedia.map((info) => (
+                                <a key={info.id} href={info.link}>
+                                    <div className="w-10 h-10 overflow-x-auto cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300">
+                                        <Image
+                                            src={info.img}
+                                            alt="icons"
+                                            width={20}
+                                            height={20}
+                                        />
+                                    </div>
+                                </a>
+                            ))}
+                        </div>
+                    </div>
+                </footer>
+                <DottedGlowBackground
+                    className="pointer-events-none mask-radial-to-90% mask-radial-at-center"
+                    opacity={1}
+                    gap={10}
+                    radius={1.6}
+                    colorLightVar="--color-neutral-500"
+                    glowColorLightVar="--color-neutral-600"
+                    colorDarkVar="--color-neutral-500"
+                    glowColorDarkVar="--color-sky-800"
+                    backgroundOpacity={0}
+                    speedMin={0.3}
+                    speedMax={1.6}
+                    speedScale={1}
+                />
+            </div>
         </div>
     );
 };
 
 export default Contact;
-export const socialMedia = [
-    {
-        id: 1,
-        link: "https://github.com/abdullah0Dev/",
-        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/1024px-GitHub_Invertocat_Logo.svg.png",
-    },
-    {
-        id: 2,
-        link: "https://wa.me/+201011245872?text=Hello%20Abdullah!",
-        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/WhatsApp_Logo_green.svg/1024px-WhatsApp_Logo_green.svg.png",
-    },
-    {
-        id: 3,
-        link: "https://www.linkedin.com/in/abdullah1dev/",
-        img: "https://cdn-icons-png.flaticon.com/512/3955/3955056.png",
-    },
-];

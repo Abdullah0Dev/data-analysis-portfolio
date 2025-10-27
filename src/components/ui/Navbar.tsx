@@ -10,29 +10,31 @@ import {
     MobileNavToggle,
     MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
+import { CONTACT_ADDRESS, navItems, OWNER_NAME } from "@/constants";
 import { useState } from "react";
 
 export function CustomNavbar() {
-    const navItems = [
-        // { name: "About", link: "#about" },[]
-        { name: "Projects", link: "#projects" },
-        { name: "Skills", link: "#skills" },
-        { name: "Testimonials", link: "#testimonials" },
-    ];
-
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     return (
         <Navbar>
             {/* Desktop Navigation */}
             <NavBody>
-                <NavbarLogo />
+                <NavbarLogo name={OWNER_NAME} />
                 <div className="relative">
                     <NavItems items={navItems} />
                 </div>
                 <div className="flex items-center gap-4">
-                    <NavbarButton variant="secondary">View Resume</NavbarButton>
-                    <NavbarButton variant="primary">Contact</NavbarButton>
+                    <NavbarButton
+                    
+                    variant="secondary">View Resume</NavbarButton>
+                    <NavbarButton
+                        as={"a"}
+                        href={CONTACT_ADDRESS}
+                        variant="primary"
+                    >
+                        Contact
+                    </NavbarButton>
                 </div>
             </NavBody>
 
@@ -69,7 +71,8 @@ export function CustomNavbar() {
                             View Resume
                         </NavbarButton>
                         <NavbarButton
-                            onClick={() => setIsMobileMenuOpen(false)}
+                            as={"a"}
+                            href={CONTACT_ADDRESS}
                             variant="primary"
                             className="w-full"
                         >

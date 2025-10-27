@@ -29,6 +29,14 @@ const nextConfig: NextConfig = {
                 protocol: "https",
                 hostname: "cdn-icons-png.flaticon.com",
             },
+            {
+                protocol: "https",
+                hostname: "cdn.mavenanalytics.io",
+            },
+            {
+                protocol: "https",
+                hostname: "mavenanalyticsio-upload-bucket-prod.s3.us-west-2.amazonaws.com",
+            },
         ],
     },
 };

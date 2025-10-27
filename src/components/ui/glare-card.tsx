@@ -35,7 +35,7 @@ export const GlareCard = ({
         "--duration": "300ms",
         "--foil-size": "100%",
         "--opacity": "0",
-        "--radius": "48px",
+        "--radius": "28px",
         "--easing": "ease",
         "--transition": "var(--duration) var(--easing)",
     } as any;
@@ -68,7 +68,7 @@ export const GlareCard = ({
     return (
         <div
             style={containerStyle}
-            className="relative isolate [contain:layout_style] [perspective:600px] transition-transform duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] will-change-transform w-[320px] max-sm:w-[390px] [aspect-ratio:17/21]"
+            className="relative isolate [contain:layout_style] [perspective:600px] transition-transform duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] will-change-transform w-96 max-sm:w-full max-sm:mx-5 [aspect-ratio:19/21]"
             ref={refElement}
             onPointerMove={(event) => {
                 const rotateFactor = 0.4;
@@ -123,13 +123,13 @@ export const GlareCard = ({
             <div className="h-full grid will-change-transform origin-center transition-transform duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] [transform:rotateY(var(--r-x))_rotateX(var(--r-y))] rounded-[var(--radius)] border border-slate-800 hover:[--opacity:0.6] hover:[--duration:200ms] hover:[--easing:linear] hover:filter-none overflow-hidden">
                 <div className="w-full h-full grid [grid-area:1/1] mix-blend-soft-light [clip-path:inset(0_0_0_0_round_var(--radius))]">
                     <div
-                        className={cn("h-full w-full bg-slate-950", className)}
+                        className={cn("h-full w-full bg-[#222]", className)}
                     >
                         <Image
                             alt="BG card image"
                             fill
-                            className="h-full w-full absolute inset-0 object-cover"
-                            src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            className="h-full w-full rounded-2xl absolute inset-0 object-cover"
+                            src="https://images.unsplash.com/photo-1505506874110-6a7a69069a08?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         />
                         <div className="relative z-10">{children}</div>
                     </div>

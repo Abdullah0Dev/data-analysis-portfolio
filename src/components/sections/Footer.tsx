@@ -1,38 +1,52 @@
-import React from "react";
-import Image from "next/image";
+"use client";
 import { BackgroundGradientAnimation } from "../ui/background-gradient-animation";
-import { IconBrain } from "@tabler/icons-react";
 
 const Footer = () => {
-    return (
-        <BackgroundGradientAnimation className="relative w-full py-2">
-            <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-3 text-center md:gap-4">
-                {/* Logo or name */}
-                <div className="flex items-center gap-2 text-gray-200">
-                    {/* Optional: if you have a logo */}
-                        <IconBrain
-                            width={24}
-                            height={24}
-                            className="text-white/80"
-                        />
-                    <span className="text-sm text-gray-300">
-                        Crafted with <span className="text-red-400">❤️</span> by{" "}
-                        <a
-                            href="https://www.devmindslab.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-400 hover:text-blue-300 font-medium transition-colors"
-                        >
-                            Dev Minds
-                        </a>
-                    </span>
-                </div>
-            </div>
+  return (
+    <div className="relative w-full flex items-end justify-center overflow-hidden mt-20">
+      {/* Half Circle Container */}
+      <div className="relative w-[380px] h-[35px] rounded-t-full overflow-hidden flex items-center justify-center animate-float">
+        {/* Animated Background */}
+        <BackgroundGradientAnimation containerClassName="absolute inset-0 z-0" />
 
-            {/* Glow line accent */}
-            <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-500/30 to-transparent"></div>
-        </BackgroundGradientAnimation>
-    );
+        {/* Footer Content */}
+        <div className="relative z-10 flex flex-col items-center justify-center text-center text-white">
+          <span className="text-sm font-light">
+            Crafted with <span className="text-red-400">❤️</span> by{" "}
+            <a
+              href="https://www.devmindslab.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:text-blue-300 font-medium transition-colors"
+            >
+              Dev Minds
+            </a>
+          </span>
+        </div>
+
+        {/* Subtle glowing edge */}
+        <div className="absolute inset-0 rounded-t-full border-t border-blue-400/30 blur-[1px]" />
+      </div>
+
+      {/* Floating animation keyframes */}
+      <style jsx>{`
+        @keyframes float {
+          0% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(8px);
+          }
+          100% {
+            transform: translateY(0);
+          }
+        }
+        .animate-float {
+          animation: float 4s ease-in-out infinite;
+        }
+      `}</style>
+    </div>
+  );
 };
 
 export default Footer;

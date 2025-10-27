@@ -230,7 +230,7 @@ export const MobileNavToggle = ({
   );
 };
 
-export const NavbarLogo = () => {
+export const NavbarLogo = ({name = 'Abdullah'}: {name?: string}) => {
   return (
     <a
       href="#"
@@ -242,7 +242,7 @@ export const NavbarLogo = () => {
         width={16}
         height={16}
       />
-      <span className="font-medium text-black dark:text-white">Abdullah</span>
+      <span className="font-medium text-black dark:text-white">{name}</span>
     </a>
   );
 };
