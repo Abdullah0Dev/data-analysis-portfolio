@@ -9,7 +9,7 @@ export const navItems = [
     { name: "Testimonials", link: "#testimonials" },
 ];
 // constants
-export const RESUME_LINK = `https://drive.google.com/file/d/1FapXf-nE5o8WuMGzANpkgS1qo2JqhniP/view`
+export const RESUME_LINK = `https://drive.google.com/file/d/1hcRiwbbP_4mioIVtfv14KEMkdDCZb-j0/view`
 export const OWNER_NAME = "Abdullah";
 export const OWNER_LOGO_URL = "https://i.ibb.co/21YqRXTp/logo.jpg";
 export const OWNER_COUNTRY_NAME = "Saudi Arabia";
