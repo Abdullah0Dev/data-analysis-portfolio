@@ -10,7 +10,6 @@ import Image from "next/image";
 import { heroData } from "@/constants";
 
 const Hero = () => {
-
     return (
         <div className="min-h-screen min-w-screen">
             <div className="relative flex h-[50rem] w-full items-center justify-center bg-white dark:bg-black">
@@ -96,15 +95,17 @@ const Hero = () => {
                                 }}
                                 className="relative z-10 mt-8 flex flex-wrap items-center justify-start max-sm:justify-center gap-4"
                             >
-                                <a href="#projects">
-                                    <button className="w-60 cursor-pointer max-sm:w-[45%] transform rounded-lg bg-black px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200">
-                                        View My Work
-                                    </button>
+                                <a
+                                    href="#projects"
+                                    className="w-60 text-center cursor-pointer max-sm:w-[45%] transform rounded-lg bg-black px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
+                                >
+                                    <button className="cursor-pointer">View My Work</button>
                                 </a>
-                                <a href="#contact">
-                                    <button className="w-60 max-sm:w-[45%] cursor-pointer transform rounded-lg border border-gray-300 bg-white px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 dark:border-gray-700 dark:bg-black dark:text-white dark:hover:bg-gray-900">
-                                        Get In Touch
-                                    </button>
+                                <a
+                                    className="w-60 max-sm:w-[45%] text-center cursor-pointer transform rounded-lg border border-gray-300 bg-white px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 dark:border-gray-700 dark:bg-black dark:text-white dark:hover:bg-gray-900"
+                                    href="#contact"
+                                >
+                                    <button className="cursor-pointer">Get In Touch</button>
                                 </a>
                             </motion.div>
                         </div>

@@ -10,7 +10,12 @@ import {
     MobileNavToggle,
     MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
-import { CONTACT_ADDRESS, navItems, OWNER_NAME } from "@/constants";
+import {
+    CONTACT_ADDRESS,
+    navItems,
+    OWNER_NAME,
+    RESUME_LINK,
+} from "@/constants";
 import { useState } from "react";
 
 export function CustomNavbar() {
@@ -26,8 +31,14 @@ export function CustomNavbar() {
                 </div>
                 <div className="flex items-center gap-4">
                     <NavbarButton
-                    
-                    variant="secondary">View Resume</NavbarButton>
+                        as={"a"}
+                        href={RESUME_LINK}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        variant="secondary"
+                    >
+                        View Resume
+                    </NavbarButton>
                     <NavbarButton
                         as={"a"}
                         href={CONTACT_ADDRESS}
@@ -65,6 +76,8 @@ export function CustomNavbar() {
                     <div className="flex w-full flex-col gap-4">
                         <NavbarButton
                             onClick={() => setIsMobileMenuOpen(false)}
+                            as={"a"}
+                            href={RESUME_LINK}
                             variant="primary"
                             className="w-full"
                         >

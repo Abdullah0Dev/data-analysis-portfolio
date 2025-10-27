@@ -7,7 +7,7 @@ const About = () => {
 
   return (
     <div>
-      <div className="" id="about">
+      <div  className="max-sm:mt-32" id="about">
         <TextHoverEffect text="ABOUT" />
       </div>
       <div className="w-full py-4">

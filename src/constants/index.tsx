@@ -1,76 +1,71 @@
+import { Metadata } from "next";
 import Image from "next/image";
 
+// Navbar Data
 export const navItems = [
     // { name: "About", link: "#about" },[]
     { name: "Projects", link: "#projects" },
     { name: "Skills", link: "#skills" },
     { name: "Testimonials", link: "#testimonials" },
 ];
+// constants
+export const RESUME_LINK = `https://drive.google.com/file/d/1FapXf-nE5o8WuMGzANpkgS1qo2JqhniP/view`
 export const OWNER_NAME = "Abdullah";
-export const CONTACT_ADDRESS = `https://wa.me/+201011245872?text=Hello%20Abdullah!`;
-export const projectsData = [
-    {
-        id: 1,
-        title: "Customer Churn Analysis",
-        subtitle: "Predictive Modeling using Python & SQL",
-        description:
-            "Developed a predictive model to identify key churn drivers across 5,000+ customers, enabling proactive retention strategies and reducing churn risk by 17%.",
-        tools: ["Python", "Pandas", "Scikit-learn", "SQL"],
-        img: "https://mavenanalyticsio-upload-bucket-prod.s3.us-west-2.amazonaws.com/197857246/projects/c3bea0c1-82cc-44f4-aa71-dd86736560c2.png",
-        link: "https://github.com/abdullah/churn-analysis",
-    },
-    {
-        id: 2,
-        title: "Sales Performance Dashboard",
-        subtitle: "Interactive KPI Tracking in Power BI",
-        description:
-            "Built a Power BI dashboard to monitor sales trends, profit margins, and customer segments, improving forecasting accuracy and decision-making efficiency by 25%.",
-        tools: ["Power BI", "DAX", "Excel", "SQL"],
-        img: "https://cdn.mavenanalytics.io/public/profile/08c10360-a031-7037-515c-674e64056860/projects/1.png",
-        link: "https://app.powerbi.com/view?r=example",
-    },
-    {
-        id: 3,
-        title: "Customer Segmentation Analysis",
-        subtitle: "Clustering & Behavioral Insights",
-        description:
-            "Performed segmentation analysis using K-Means and visualization dashboards to identify high-value customer groups and tailor targeted marketing strategies.",
-        tools: ["Python", "Pandas", "Matplotlib", "Seaborn"],
-        img: "https://mavenanalyticsio-upload-bucket-prod.s3.us-west-2.amazonaws.com/197857246/projects/c3bea0c1-82cc-44f4-aa71-dd86736560c2.png",
-        link: "https://github.com/abdullah/customer-segmentation",
-    },
-    {
-        id: 4,
-        title: "Financial Performance Report",
-        subtitle: "Power BI & Excel Integration",
-        description:
-            "Designed a financial dashboard analyzing revenue streams, expense trends, and profit ratios, helping leadership track KPIs and optimize financial planning.",
-        tools: ["Power BI", "Excel", "DAX", "SQL"],
-        img: " https://cdn.mavenanalytics.io/public/profile/08c10360-a031-7037-515c-674e64056860/projects/1.png",
-        link: "https://github.com/abdullah/financial-performance",
-    },
-    {
-        id: 5,
-        title: "Supply Chain Efficiency Analysis",
-        subtitle: "Operational Performance Optimization",
-        description:
-            "Analyzed delivery and inventory data to identify bottlenecks, reducing order fulfillment time by 12% and improving overall supply chain efficiency.",
-        tools: ["Python", "SQL", "Power BI", "Pandas"],
-        img: " https://cdn.mavenanalytics.io/public/profile/08c10360-a031-7037-515c-674e64056860/projects/1.png",
-        link: "https://github.com/abdullah/supply-chain-analysis",
-    },
-    {
-        id: 6,
-        title: "Marketing Campaign Performance",
-        subtitle: "Attribution & ROI Analysis",
-        description:
-            "Evaluated campaign data across multiple channels to measure ROI, identify top-performing segments, and provide data-backed recommendations for future campaigns.",
-        tools: ["Tableau", "SQL", "Excel", "Python"],
-        img: " https://cdn.mavenanalytics.io/public/profile/08c10360-a031-7037-515c-674e64056860/projects/1.png",
-        link: "https://github.com/abdullah/marketing-performance",
-    },
-];
+export const OWNER_LOGO_URL = "https://i.ibb.co/21YqRXTp/logo.jpg";
+export const OWNER_COUNTRY_NAME = "Saudi Arabia";
+export const OWNER_CITY_NAME = "Riyadh";
+export const WEBSITE_ADDRESS = "https://abdullah-portfolio-liard.vercel.app/";
+export const CONTACT_ADDRESS = `https://wa.me/+201122026970?text=Hello%20${OWNER_NAME}!`;
+// METADATA for SEO
+export const metadataTemplate: Metadata = {
+    title: `${OWNER_NAME} - Professional Data Analyst`,
+    description: `${OWNER_NAME} is a professional data analyst specializing in turning complex datasets into actionable business insights using Python, SQL, Power BI, and advanced analytics techniques.`,
+    keywords: [
+        // Core Data Analysis Services
+        "data analysis",
+        "business intelligence",
+        "data visualization",
+        "predictive analytics",
+        "Python data analysis",
+        "SQL analytics",
+        "Power BI dashboards",
+        "machine learning for business",
+        "data-driven decision making",
+        "data storytelling",
 
+        // Local SEO (if targeting a region)
+        `"data analyst in ${OWNER_COUNTRY_NAME}`,
+        `"business intelligence consultant ${OWNER_COUNTRY_NAME}`,
+        `"Power BI expert ${OWNER_CITY_NAME}`,
+        `"Python data analytics ${OWNER_COUNTRY_NAME}`,
+        // Branding
+        OWNER_NAME,
+    ],
+    openGraph: {
+        title: `${OWNER_NAME} - Professional Data Analyst`,
+        description: `Expert data analysis and business intelligence solutions using Python, SQL, Power BI, and machine learning to drive smarter business decisions.`,
+        type: "website",
+        url: WEBSITE_ADDRESS,
+        siteName: OWNER_NAME,
+        images: [
+            {
+                url: OWNER_LOGO_URL,
+                width: 1200,
+                height: 630,
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        site: `@${OWNER_NAME.trim()}`,
+        creator: `@${OWNER_NAME.trim()}`,
+        title: `${OWNER_NAME} - Professional Data Analyst`,
+        description: `Expert data analysis and business intelligence solutions using Python, SQL, Power BI, and machine learning to drive smarter business decisions.`,
+        images: [OWNER_LOGO_URL],
+    },
+};
+
+// Hero Section content data
 export const heroData = {
     title: "Transforming data into actionable insights.",
     subTitle: {
@@ -81,6 +76,7 @@ export const heroData = {
     },
 };
 
+// About Section content data
 export const aboutContentData = [
     {
         title: "Turning Data into Insights",
@@ -130,6 +126,7 @@ export const aboutContentData = [
     },
 ];
 
+// Skills Section Data
 export const skillsData = [
     {
         name: "Python",
@@ -240,6 +237,71 @@ export const skillsData = [
     },
 ];
 
+// Projects Data
+export const projectsData = [
+    {
+        id: 1,
+        title: "Customer Churn Analysis",
+        subtitle: "Predictive Modeling using Python & SQL",
+        description:
+            "Developed a predictive model to identify key churn drivers across 5,000+ customers, enabling proactive retention strategies and reducing churn risk by 17%.",
+        tools: ["Python", "Pandas", "Scikit-learn", "SQL"],
+        img: "https://mavenanalyticsio-upload-bucket-prod.s3.us-west-2.amazonaws.com/197857246/projects/c3bea0c1-82cc-44f4-aa71-dd86736560c2.png",
+        link: "https://github.com/abdullah/churn-analysis",
+    },
+    {
+        id: 2,
+        title: "Sales Performance Dashboard",
+        subtitle: "Interactive KPI Tracking in Power BI",
+        description:
+            "Built a Power BI dashboard to monitor sales trends, profit margins, and customer segments, improving forecasting accuracy and decision-making efficiency by 25%.",
+        tools: ["Power BI", "DAX", "Excel", "SQL"],
+        img: "https://cdn.mavenanalytics.io/public/profile/08c10360-a031-7037-515c-674e64056860/projects/1.png",
+        link: "https://app.powerbi.com/view?r=example",
+    },
+    {
+        id: 3,
+        title: "Customer Segmentation Analysis",
+        subtitle: "Clustering & Behavioral Insights",
+        description:
+            "Performed segmentation analysis using K-Means and visualization dashboards to identify high-value customer groups and tailor targeted marketing strategies.",
+        tools: ["Python", "Pandas", "Matplotlib", "Seaborn"],
+        img: "https://mavenanalyticsio-upload-bucket-prod.s3.us-west-2.amazonaws.com/197857246/projects/c3bea0c1-82cc-44f4-aa71-dd86736560c2.png",
+        link: "https://github.com/abdullah/customer-segmentation",
+    },
+    {
+        id: 4,
+        title: "Financial Performance Report",
+        subtitle: "Power BI & Excel Integration",
+        description:
+            "Designed a financial dashboard analyzing revenue streams, expense trends, and profit ratios, helping leadership track KPIs and optimize financial planning.",
+        tools: ["Power BI", "Excel", "DAX", "SQL"],
+        img: " https://cdn.mavenanalytics.io/public/profile/08c10360-a031-7037-515c-674e64056860/projects/1.png",
+        link: "https://github.com/abdullah/financial-performance",
+    },
+    {
+        id: 5,
+        title: "Supply Chain Efficiency Analysis",
+        subtitle: "Operational Performance Optimization",
+        description:
+            "Analyzed delivery and inventory data to identify bottlenecks, reducing order fulfillment time by 12% and improving overall supply chain efficiency.",
+        tools: ["Python", "SQL", "Power BI", "Pandas"],
+        img: " https://cdn.mavenanalytics.io/public/profile/08c10360-a031-7037-515c-674e64056860/projects/1.png",
+        link: "https://github.com/abdullah/supply-chain-analysis",
+    },
+    {
+        id: 6,
+        title: "Marketing Campaign Performance",
+        subtitle: "Attribution & ROI Analysis",
+        description:
+            "Evaluated campaign data across multiple channels to measure ROI, identify top-performing segments, and provide data-backed recommendations for future campaigns.",
+        tools: ["Tableau", "SQL", "Excel", "Python"],
+        img: " https://cdn.mavenanalytics.io/public/profile/08c10360-a031-7037-515c-674e64056860/projects/1.png",
+        link: "https://github.com/abdullah/marketing-performance",
+    },
+];
+
+// Feedback Data
 export const testimonialsData = [
     {
         quote: "Working with Abdullah was exceptional. His data insights helped us identify trends we’d completely overlooked. Reliable, precise, and truly an expert in his field.",
@@ -272,6 +334,8 @@ export const testimonialsData = [
         img: "/icons/person.png",
     },
 ];
+
+// Experience Timeline Data Data
 export const experienceData = [
     {
         title: "2025",
@@ -388,6 +452,7 @@ export const experienceData = [
     },
 ];
 
+// Contact Content Data
 export const contactData = {
     title: {
         beforeHeighLight: "Let’s transform your ",
@@ -397,10 +462,11 @@ export const contactData = {
     subTitle: `Whether you need advanced dashboards, automated reports, or end-to-end data pipelines — I help teams uncover trends, make informed decisions, and build scalable data systems. Let’s connect and discuss your next project.`,
 };
 
+// Footer Social Media Data
 export const socialMedia = [
     {
         id: 1,
-        link: "https://github.com/abdullah0Dev/",
+        link: "https://github.com/abdullahfuture",
         img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/1024px-GitHub_Invertocat_Logo.svg.png",
     },
     {
@@ -410,7 +476,7 @@ export const socialMedia = [
     },
     {
         id: 3,
-        link: "https://www.linkedin.com/in/abdullah1dev/",
+        link: "https://www.linkedin.com/in/abdullah01ahmed/",
         img: "https://cdn-icons-png.flaticon.com/512/3955/3955056.png",
     },
 ];

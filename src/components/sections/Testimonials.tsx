@@ -11,7 +11,7 @@ const Testimonials = () => {
         Kind words from
         <span className="text-purple-500"> satisfied clients</span>
       </h1> */}
-            <div className="" id="testimonials">
+            <div className="max-sm:mt-32" id="testimonials">
                 <TextHoverEffect text="FEEDBACK" />
             </div>
             <div className="flex flex-col items-center max-lg:mt-10">
