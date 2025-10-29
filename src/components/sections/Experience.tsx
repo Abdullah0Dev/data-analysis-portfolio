@@ -7,7 +7,7 @@ import { experienceData } from "@/constants";
 const Experience = () => {
     return (
         <div>
-            <div className=" " id="experience">
+            <div className="lg:-mb-32  " id="experience">
                 <TextHoverEffect text="EXPERIENCE" />
             </div>
             <div className="">

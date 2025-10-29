@@ -4,12 +4,13 @@ import { TextHoverEffect } from "../ui/text-hover-effect";
 import { GlareCard } from "../ui/glare-card";
 import Image from "next/image";
 import { skillsData } from "@/constants";
+import { CometCard } from "../ui/comet-card";
 
 
 const Skills = () => {
     return (
         <section>
-            <div className="" id="skills">
+            <div className="lg:-mb-32" id="skills">
                 <TextHoverEffect text="SKILLS" />
             </div>
 

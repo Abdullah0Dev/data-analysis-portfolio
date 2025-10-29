@@ -85,7 +85,6 @@
     --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
     --sidebar-border: oklch(0.929 0.013 255.508);
     --sidebar-ring: oklch(0.704 0.04 256.788);
-    --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
     --animate-first: moveVertical 30s ease infinite;
     --animate-second: moveInCircle 20s reverse infinite;
     --animate-third: moveInCircle 40s linear infinite;
@@ -151,18 +150,7 @@
     body {
         @apply bg-background text-foreground;
     }
-}
-
-@keyframes spotlight {
-    0% {
-        opacity: 0;
-        transform: translate(-72%, -62%) scale(0.5);
-    }
-    100% {
-        opacity: 1;
-        transform: translate(-50%, -40%) scale(1);
-    }
-}
+} 
 
 @keyframes moveHorizontal {
     0% {

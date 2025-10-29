@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import { cn } from "@/lib/utils";
 import { useEffect, useRef, useState } from "react";
@@ -111,7 +112,7 @@ export const BackgroundGradientAnimation = ({
           </filter>
         </defs>
       </svg>
-      <div className={cn("", className)}>{children}</div>
+      <div className={cn("absolute z-20", className)}>{children}</div>
       <div
         className={cn(
           "gradients-container h-full w-full blur-lg",

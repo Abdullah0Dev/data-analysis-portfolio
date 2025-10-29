@@ -1,17 +1,14 @@
 "use client";
 
 import React from "react";
-import { CustomNavbar } from "../ui/Navbar";
-import { Spotlight } from "../ui/spotlight";
 import { cn } from "@/lib/utils";
-import { PixelatedCanvas } from "@/components/ui/pixelated-canvas";
 import { motion } from "motion/react";
 import Image from "next/image";
 import { heroData } from "@/constants";
 
 const Hero = () => {
     return (
-        <div className="min-h-screen min-w-screen">
+        <div className="  min-w-screen">
             <div className="relative flex h-[50rem] w-full items-center justify-center bg-white dark:bg-black">
                 <div
                     className={cn(

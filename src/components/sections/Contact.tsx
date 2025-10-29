@@ -75,7 +75,7 @@ export const gridItems = [
 const Contact = () => {
     return (
         <div className="">
-            <div className="z-10 mt-12" id="contact">
+            <div className="z-10 mt-12 lg:-mb-32" id="contact">
                 <TextHoverEffect text="CONTACT" />
             </div>
             <div className="relative overflow-hidden">

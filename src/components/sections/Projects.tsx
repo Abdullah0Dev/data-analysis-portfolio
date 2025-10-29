@@ -11,7 +11,7 @@ const Projects = () => {
                Kind words from
                <span className="text-purple-500"> satisfied clients</span>
              </h1> */}
-            <div className="" id="projects">
+            <div className=" lg:-mb-32" id="projects">
                 <TextHoverEffect text="PROJECTS" />
             </div>
             <div className="relative w-full items-center justify-center flex ">
@@ -23,7 +23,7 @@ const Projects = () => {
                                     href={item.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="my-5 flex w-96 cursor-pointer flex-col items-stretch rounded-[16px] border-0 bg-[#1F2121] p-2 saturate-0  md:p-4"
+                                    className="my-5 flex w-96 cursor-pointer flex-col items-stretch rounded-4xl border-0 bg-[#1F2121] p-2  md:p-4"
                                     aria-label={item.title + " Card"}
                                     style={{
                                         transformStyle: "preserve-3d",
@@ -47,7 +47,7 @@ const Projects = () => {
                                             <Image
                                                 loading="lazy"
                                                 fill
-                                                className="h-full w-full object-cover rounded-t-2xl transition-transform duration-500 group-hover:scale-105"
+                                                className="h-full w-full inset-0 object-cover rounded-t-2xl transition-transform duration-500"
                                                 alt="Invite background"
                                                 src={item.img}
                                                 style={{

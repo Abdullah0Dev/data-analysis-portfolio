@@ -1,6 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 export const InfiniteMovingCards = ({
@@ -83,7 +85,7 @@ export const InfiniteMovingCards = ({
         <div
             ref={containerRef}
             className={cn(
-                "scroller relative z-20 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+                "scroller relative z-20 max-w-7xl overflow-hidden mask-[linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
                 className
             )}
         >
@@ -92,12 +94,12 @@ export const InfiniteMovingCards = ({
                 className={cn(
                     "flex w-max min-w-full shrink-0 flex-nowrap gap-4 py-4",
                     start && "animate-scroll",
-                    pauseOnHover && "hover:[animation-play-state:paused]"
+                    pauseOnHover && "hover:paused"
                 )}
             >
-                {items.map((item, idx) => (
+                {items.map((item) => (
                     <li
-                        className="relative flex flex-col justify-between w-[450px] max-w-full shrink-0 rounded-2xl border border-b-0 border-zinc-200 bg-[linear-gradient(180deg,#fafafa,#f5f5f5)] px-8 py-6 md:w-[600px] dark:border-zinc-700 dark:bg-[linear-gradient(180deg,#27272a,#18181b)]"
+                        className="relative flex flex-col justify-between w-[450px] max-w-full shrink-0 rounded-2xl border border-b-0 border-zinc-200 bg-[linear-gradient(180deg,#fafafa,#f5f5f5)] px-8 py-6 md:w-[700px] dark:border-zinc-700 dark:bg-[linear-gradient(180deg,#27272a,#18181b)]"
                         key={item.name}
                     >
                         <blockquote className="flex flex-col flex-1 justify-between h-full">
@@ -107,10 +109,12 @@ export const InfiniteMovingCards = ({
 
                             <div className="relative z-20 mt-6 flex flex-row items-center">
                                 <div className="me-3">
-                                    <img
+                                    <Image
                                         className="rounded-full w-14 h-14"
                                         src={item.img}
                                         alt="profile"
+                                        width={56}
+                                        height={56}
                                     />
                                 </div>
                                 <span className="flex flex-col gap-1">

@@ -35,6 +35,10 @@ const nextConfig: NextConfig = {
             },
             {
                 protocol: "https",
+                hostname: "randomuser.me",
+            },
+            {
+                protocol: "https",
                 hostname: "mavenanalyticsio-upload-bucket-prod.s3.us-west-2.amazonaws.com",
             },
         ],

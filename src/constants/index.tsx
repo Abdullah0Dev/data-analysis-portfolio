@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Image from "next/image";
 
 // Navbar Data
 export const navItems = [
@@ -9,13 +8,14 @@ export const navItems = [
     { name: "Testimonials", link: "#testimonials" },
 ];
 // constants
-export const RESUME_LINK = `https://drive.google.com/file/d/1hcRiwbbP_4mioIVtfv14KEMkdDCZb-j0/view`
+export const RESUME_LINK = `https://drive.google.com/file/d/1hcRiwbbP_4mioIVtfv14KEMkdDCZb-j0/view`;
 export const OWNER_NAME = "Abdullah";
 export const OWNER_LOGO_URL = "https://i.ibb.co/21YqRXTp/logo.jpg";
 export const OWNER_COUNTRY_NAME = "Saudi Arabia";
 export const OWNER_CITY_NAME = "Riyadh";
 export const WEBSITE_ADDRESS = "https://abdullah-portfolio-liard.vercel.app/";
 export const CONTACT_ADDRESS = `https://wa.me/+201122026970?text=Hello%20${OWNER_NAME}!`;
+export const CONTACT_EMAIL = `abdullahyonus616@gmail.com`;
 // METADATA for SEO
 export const metadataTemplate: Metadata = {
     title: `${OWNER_NAME} - Professional Data Analyst`,
@@ -77,55 +77,13 @@ export const heroData = {
 };
 
 // About Section content data
-export const aboutContentData = [
-    {
-        title: "Turning Data into Insights",
-        description:
-            "I’m a data analyst passionate about uncovering patterns that drive smarter decisions. My expertise lies in transforming raw, messy datasets into actionable insights using tools like Python, SQL, and Power BI. I believe that every dataset tells a story — it just needs the right perspective to bring it to life.",
-        content: (
-            <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--sky-400),var(--emerald-400))] text-white font-semibold">
-                Data Storytelling
-            </div>
-        ),
-    },
-    {
-        title: "Analytical Thinking Meets Creativity",
-        description:
-            "For me, analysis is more than just numbers — it’s about understanding context. I combine data visualization, statistical modeling, and problem-solving to communicate insights clearly and effectively. Whether it’s identifying trends, forecasting growth, or optimizing performance, I turn complex data into visual stories that everyone can understand.",
-        content: (
-            <div className="flex h-full w-full items-center justify-center text-white">
-                <Image
-                    src="/images/analytics-dashboard.png"
-                    width={300}
-                    height={300}
-                    className="h-full w-full object-contain"
-                    alt="Analytics Dashboard"
-                />
-            </div>
-        ),
-    },
-    {
-        title: "Data-Driven Decision Making",
-        description:
-            "I thrive on helping businesses make evidence-based decisions. By connecting data pipelines, automating reports, and building predictive models, I enable teams to act faster and with confidence. My goal is always the same — to bridge the gap between data and action.",
-        content: (
-            <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--amber-400),var(--rose-400))] text-white font-semibold">
-                Decision Intelligence
-            </div>
-        ),
-    },
-    {
-        title: "Continuous Learning & Curiosity",
-        description:
-            "The world of data is constantly evolving — and that’s what keeps me inspired. I’m always exploring new tools, statistical techniques, and visualization trends to stay ahead. Beyond the numbers, I’m deeply curious about how data can make an impact on real-world problems.",
-        content: (
-            <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--violet-400),var(--sky-400))] text-white font-semibold">
-                Growth Mindset
-            </div>
-        ),
-    },
-];
-
+export const aboutContentData = {
+    title: "About me",
+    content:
+        "I’m Abdullah, a data analyst passionate about transforming data into clear insights and meaningful stories. I specialize in turning raw numbers into decisions that drive growth, improve performance, and uncover hidden trends through data visualization and analysis.",
+    hookTitle: "Hey, want to team up on a project?",
+    email: CONTACT_EMAIL,
+};
 // Skills Section Data
 export const skillsData = [
     {
@@ -307,31 +265,31 @@ export const testimonialsData = [
         quote: "Working with Abdullah was exceptional. His data insights helped us identify trends we’d completely overlooked. Reliable, precise, and truly an expert in his field.",
         name: "Mohammed",
         title: "CEO of BrightWave Solutions",
-        img: "/icons/person.png",
+        img: "https://randomuser.me/api/portraits/men/4.jpg",
     },
     {
         quote: "Abdullah consistently delivered high-quality analysis that guided our marketing strategy. Always on time, detail-oriented, and a pleasure to work with.",
         name: "Liam Martinez",
         title: "Marketing Manager at NextGen Media",
-        img: "/icons/person.png",
+        img: "https://randomuser.me/api/portraits/men/20.jpg",
     },
     {
         quote: "Abdullah’s analytical skills transformed how we understand our data. His reports were clear, actionable, and directly improved our performance metrics.",
         name: "Noah John",
         title: "Founder of EcoTech Innovations",
-        img: "/icons/person.png",
+        img: "https://randomuser.me/api/portraits/men/32.jpg",
     },
     {
         quote: "Abdullah made our data come to life. His ability to translate numbers into insights helped us make confident business decisions with real results.",
         name: "Ethan Smith",
         title: "Product Manager at CloudSync",
-        img: "/icons/person.png",
+        img: "https://randomuser.me/api/portraits/men/52.jpg",
     },
     {
         quote: "Partnering with Abdullah was a great experience. His expertise in data analysis and clear communication made the whole process smooth and impactful.",
         name: "Adam Johnson",
         title: "Creative Director at PixelPerfect Designs",
-        img: "/icons/person.png",
+        img: "https://randomuser.me/api/portraits/men/10.jpg",
     },
 ];
 
