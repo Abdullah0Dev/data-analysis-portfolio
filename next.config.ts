@@ -23,11 +23,43 @@ const nextConfig: NextConfig = {
             },
             {
                 protocol: "https",
+                hostname: "pbs.twimg.com",
+            },
+            {
+                protocol: "https",
                 hostname: "boostlabs.com",
             },
             {
                 protocol: "https",
+                hostname: "blog.coupler.io",
+            },
+            {
+                protocol: "https",
+                hostname: "cdn.activestate.com",
+            },
+            {
+                protocol: "https",
+                hostname: "digitalfloats.com",
+            },
+            {
+                protocol: "https",
+                hostname: "softwaretechnologyconsultants.com",
+            },
+            {
+                protocol: "https",
+                hostname: "github-production-user-asset-6210df.s3.amazonaws.com",
+            },
+            {
+                protocol: "https",
                 hostname: "cdn-icons-png.flaticon.com",
+            },
+            {
+                protocol: "https",
+                hostname: "github.com",
+            },
+            {
+                protocol: "https",
+                hostname: "abdallahnasser.netlify.app",
             },
             {
                 protocol: "https",
@@ -36,6 +68,10 @@ const nextConfig: NextConfig = {
             {
                 protocol: "https",
                 hostname: "randomuser.me",
+            },
+            {
+                protocol: "https",
+                hostname: "raw.githubusercontent.com",
             },
             {
                 protocol: "https",

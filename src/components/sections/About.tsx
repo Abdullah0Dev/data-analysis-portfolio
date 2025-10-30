@@ -10,6 +10,7 @@ import animationLottieData from "@/constants/lottie/confetti.json";
 import { IoCopyOutline } from "react-icons/io5";
 import MagicButton from "../ui/magic-button";
 import { BackgroundGradientAnimation } from "../ui/background-gradient-animation";
+import Image from "next/image";
 
 const About = () => {
     return (
@@ -20,7 +21,11 @@ const About = () => {
             <div className="w-full p-5">
                 <BentoGrid className="max-w-7xl mx-auto md:auto-rows-[20rem]">
                     {items.map((item, i) => (
-                        <BentoGridItem key={i} className={item.className} content={item.content} />
+                        <BentoGridItem
+                            key={i}
+                            className={item.className}
+                            content={item.content}
+                        />
                     ))}
                 </BentoGrid>
             </div>
@@ -102,7 +107,8 @@ const SkeletonFour = () => {
             className="flex flex-1 relative w-full h-full min-h-24 max-sm:h-120  rounded-3xl flex-row  overflow-hidden"
         >
             {/* make the image full width & height */}
-            <img
+            <Image
+                fill
                 src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
                 alt="avatar"
                 className="rounded-3xl absolute inset-0  w-full h-full object-cover"

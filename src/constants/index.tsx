@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 
 // Navbar Data
 export const navItems = [
@@ -199,63 +200,64 @@ export const skillsData = [
 export const projectsData = [
     {
         id: 1,
-        title: "Customer Churn Analysis",
-        subtitle: "Predictive Modeling using Python & SQL",
+        title: "Smart Hospitality Analytics",
+        subtitle: "Revenue Optimization & Customer Insights",
         description:
-            "Developed a predictive model to identify key churn drivers across 5,000+ customers, enabling proactive retention strategies and reducing churn risk by 17%.",
-        tools: ["Python", "Pandas", "Scikit-learn", "SQL"],
-        img: "https://mavenanalyticsio-upload-bucket-prod.s3.us-west-2.amazonaws.com/197857246/projects/c3bea0c1-82cc-44f4-aa71-dd86736560c2.png",
-        link: "https://github.com/abdullah/churn-analysis",
+            "Built a dynamic analytics dashboard that uncovered city-wise and day-wise performance trends for multi-location hotels. Helped optimize pricing, target customers better, and boost occupancy rates across locations — driving measurable revenue growth.",
+        tools: ["Excel", "Power BI", "SQL"],
+        img: "https://raw.githubusercontent.com/abdullahfuture/Hospitality-Analytics/main/hosptality-dashboard.png",
+        link: "https://github.com/abdullahfuture/Hospitality-Analytics",
     },
     {
         id: 2,
-        title: "Sales Performance Dashboard",
-        subtitle: "Interactive KPI Tracking in Power BI",
+        title: "US Healthcare Analytics Dashboard",
+        subtitle: "Healthcare Data Intelligence & Performance Insights",
         description:
-            "Built a Power BI dashboard to monitor sales trends, profit margins, and customer segments, improving forecasting accuracy and decision-making efficiency by 25%.",
-        tools: ["Power BI", "DAX", "Excel", "SQL"],
-        img: "https://cdn.mavenanalytics.io/public/profile/08c10360-a031-7037-515c-674e64056860/projects/1.png",
-        link: "https://app.powerbi.com/view?r=example",
+            "Developed an advanced Power BI dashboard that analyzes patient demographics, hospital performance, and payer-provider relationships across the U.S. healthcare system. Delivered actionable insights to improve decision-making, optimize hospital operations, and enhance patient care outcomes.",
+        tools: ["Power BI", "DAX", "SQL", "Excel"],
+        img: "/images/us-health.webp",
+        link: "https://github.com/abdullahfuture/US-Healthcare-Analysis",
     },
     {
         id: 3,
-        title: "Customer Segmentation Analysis",
-        subtitle: "Clustering & Behavioral Insights",
+        title: "Competitive Marketing Analysis Report",
+        subtitle: "Sales Channel & Product Performance Insights",
         description:
-            "Performed segmentation analysis using K-Means and visualization dashboards to identify high-value customer groups and tailor targeted marketing strategies.",
-        tools: ["Python", "Pandas", "Matplotlib", "Seaborn"],
-        img: "https://mavenanalyticsio-upload-bucket-prod.s3.us-west-2.amazonaws.com/197857246/projects/c3bea0c1-82cc-44f4-aa71-dd86736560c2.png",
-        link: "https://github.com/abdullah/customer-segmentation",
+            "Designed an interactive Power BI report analyzing total and channel-wise sales across online, social media, outlet, and store platforms. Delivered insights on product performance, sales distribution, and seasonal trends — empowering smarter marketing spend and channel optimization.",
+        tools: ["Power BI", "DAX", "Excel", "SQL"],
+        img: "https://github.com/abdullahfuture/Competivtive-Marketing-Analysis-Report/blob/main/Competivtive%20Marketing%20Analysis%20Report.jpg?raw=true",
+        link: "https://github.com/abdullahfuture/Competivtive-Marketing-Analysis-Report",
     },
     {
         id: 4,
-        title: "Financial Performance Report",
-        subtitle: "Power BI & Excel Integration",
+        title: "Alfa Store Sales & Profit Dashboard",
+        subtitle: "Global Retail Analytics & Performance Tracking",
         description:
-            "Designed a financial dashboard analyzing revenue streams, expense trends, and profit ratios, helping leadership track KPIs and optimize financial planning.",
-        tools: ["Power BI", "Excel", "DAX", "SQL"],
-        img: " https://cdn.mavenanalytics.io/public/profile/08c10360-a031-7037-515c-674e64056860/projects/1.png",
-        link: "https://github.com/abdullah/financial-performance",
+            "Created a Power BI dashboard that visualizes multi-year sales, profit ratios, and returns across global markets. Delivered insights by category, sub-category, and city to help identify top-performing regions, improve product strategy, and drive data-driven business growth.",
+        tools: ["Power BI", "DAX", "Excel", "SQL"],
+        img: "https://github.com/abdullahfuture/Alfa-Store-Analysis-Dashboard/blob/main/Alfa%20Store%20Analysis%20Dashboard.jpg?raw=true",
+        link: "https://github.com/abdullahfuture/Alfa-Store-Analysis-Dashboard",
     },
     {
         id: 5,
-        title: "Supply Chain Efficiency Analysis",
-        subtitle: "Operational Performance Optimization",
+        title: "E-Commerce Data Analysis Dashboard",
+        subtitle: "Customer Insights & Sales Performance Tracking",
         description:
-            "Analyzed delivery and inventory data to identify bottlenecks, reducing order fulfillment time by 12% and improving overall supply chain efficiency.",
-        tools: ["Python", "SQL", "Power BI", "Pandas"],
-        img: " https://cdn.mavenanalytics.io/public/profile/08c10360-a031-7037-515c-674e64056860/projects/1.png",
-        link: "https://github.com/abdullah/supply-chain-analysis",
+            "Built a detailed Power BI dashboard to analyze online sales performance, profit margins, and customer behavior across multiple regions. Helped identify top-selling products, improve pricing strategies, and optimize marketing efforts through interactive visual insights.",
+        tools: ["Power BI", "DAX", "Excel", "SQL"],
+        img: "https://github.com/KalyanM45/E-Commerce-Data-Analysis/blob/main/E-Commerce%20Data%20Analysis_page.jpg?raw=true",
+        link: "https://github.com/abdullahfuture/E-Commerce-Data-Analysis",
     },
+
     {
         id: 6,
-        title: "Marketing Campaign Performance",
-        subtitle: "Attribution & ROI Analysis",
+        title: "Shopping Customer Segmentation",
+        subtitle: "Data-Driven Marketing & Customer Targeting",
         description:
-            "Evaluated campaign data across multiple channels to measure ROI, identify top-performing segments, and provide data-backed recommendations for future campaigns.",
-        tools: ["Tableau", "SQL", "Excel", "Python"],
-        img: " https://cdn.mavenanalytics.io/public/profile/08c10360-a031-7037-515c-674e64056860/projects/1.png",
-        link: "https://github.com/abdullah/marketing-performance",
+            "Implemented a customer segmentation model using demographic and behavioral data such as age, income, and spending patterns. Delivered clear customer clusters to help marketing teams personalize campaigns, boost conversions, and maximize ROI.",
+        tools: ["Python", "Pandas", "Matplotlib", "Seaborn", "Scikit-learn"],
+        img: "https://github.com/abdullahfuture/Segment-Shopping-Customers/blob/main/end-results.png?raw=true",
+        link: "https://github.com/abdullahfuture/Segment-Shopping-Customers",
     },
 ];
 
@@ -305,22 +307,34 @@ export const experienceData = [
                     using Power BI and Python.
                 </p>
                 <div className="grid grid-cols-2 gap-4">
-                    <img
+                    <Image
+                        loading="lazy"
+                        width={300}
+                        height={400}
                         src="https://blog.coupler.io/wp-content/uploads/2025/04/web-analytics-dashboard-power-bi-768x431.png"
                         alt="Power BI Dashboard"
                         className="h-24 md:h-40 lg:h-52 w-full rounded-lg object-cover shadow-md"
                     />
-                    <img
+                    <Image
+                        loading="lazy"
+                        width={300}
+                        height={400}
                         src="https://digitalfloats.com/wp-content/uploads/2023/08/Python-for-data-analysis-800x445.jpg"
                         alt="Python Data Analysis"
                         className="h-24 md:h-40 lg:h-52 w-full rounded-lg object-cover shadow-md"
                     />
-                    <img
+                    <Image
+                        loading="lazy"
+                        width={300}
+                        height={400}
                         src="https://www.shutterstock.com/image-photo/data-analyst-working-on-business-260nw-2276307805.jpg"
                         alt="Dashboard insights"
                         className="h-24 md:h-40 lg:h-52 w-full rounded-lg object-cover shadow-md"
                     />
-                    <img
+                    <Image
+                        loading="lazy"
+                        width={300}
+                        height={400}
                         src="https://boostlabs.com/wp-content/uploads/2023/02/10-types-of-data-visualization-1-1024x614.jpg"
                         alt="Data Visualization"
                         className="h-24 md:h-40 lg:h-52 w-full rounded-lg object-cover shadow-md"
@@ -343,22 +357,34 @@ export const experienceData = [
                     PostgreSQL, Power BI
                 </div>
                 <div className="grid grid-cols-2 gap-4">
-                    <img
+                    <Image
+                        loading="lazy"
+                        width={300}
+                        height={400}
                         src="https://cdn.activestate.com/wp-content/uploads/2020/06/AutomatableTasks.jpg"
                         alt="Python Data Automation"
                         className="h-24 md:h-40 lg:h-52 w-full rounded-lg object-cover shadow-md"
                     />
-                    <img
+                    <Image
+                        loading="lazy"
+                        width={300}
+                        height={400}
                         src="https://images.unsplash.com/photo-1607706189992-eae578626c86?q=80&w=800"
                         alt="SQL Query Optimization"
                         className="h-24 md:h-40 lg:h-52 w-full rounded-lg object-cover shadow-md"
                     />
-                    <img
+                    <Image
+                        loading="lazy"
+                        width={300}
+                        height={400}
                         src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=800"
                         alt="Power BI Report"
                         className="h-24 md:h-40 lg:h-52 w-full rounded-lg object-cover shadow-md"
                     />
-                    <img
+                    <Image
+                        loading="lazy"
+                        width={300}
+                        height={400}
                         src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800"
                         alt="Machine Learning Workflow"
                         className="h-24 md:h-40 lg:h-52 w-full rounded-lg object-cover shadow-md"
@@ -384,24 +410,37 @@ export const experienceData = [
                     </li>
                 </ul>
                 <div className="grid grid-cols-2 gap-4">
-                    <img
-                        src="https://yourdigitalaid.com/wp-content/uploads/2022/05/passing-crash-course-in-python.jpg"
+                    <Image
+                        loading="lazy"
+                        src="https://abdallahnasser.netlify.app/assets/img/3.png"
                         alt="Learning Python"
                         className="h-24 md:h-40 lg:h-52 w-full rounded-lg object-cover shadow-md"
+                        // make width and hight
+                        width={300}
+                        height={400}
                     />
-                    <img
+                    <Image
+                        loading="lazy"
                         src="https://softwaretechnologyconsultants.com/wp-content/uploads/2022/07/python-data-yand.jpg"
                         alt="Data Visualization Study"
+                        width={300}
+                        height={400}
                         className="h-24 md:h-40 lg:h-52 w-full rounded-lg object-cover shadow-md"
                     />
-                    <img
+                    <Image
+                        loading="lazy"
+                        width={300}
+                        height={400}
                         src="https://images.unsplash.com/photo-1556155092-8707de31f9c4?q=80&w=800"
                         alt="Certification"
                         className="h-24 md:h-40 lg:h-52 w-full rounded-lg object-cover shadow-md"
                     />
-                    <img
-                        src="https://scontent.fcai19-11.fna.fbcdn.net/v/t39.30808-6/526853446_3751571605140193_6397578126667825284_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=7uCsL1howu8Q7kNvwFsILLd&_nc_oc=AdmXJwRRzoAhpnntxivMcOe0yHEXdObljjN-5M-lZxks8fbnXPmLC8buacOQanhP8hk&_nc_zt=23&_nc_ht=scontent.fcai19-11.fna&_nc_gid=xF4aeBlpBwqBFoUJ2_WNcg&oh=00_Afcu4F_1xlIPW9KvZNmZvk-6ys1mj2B2WaDYuwNsyVBkrA&oe=6903920A"
+                    <Image
+                        loading="lazy"
+                        src="https://abdallahnasser.netlify.app/assets/img/4.png"
                         alt="Data Project"
+                        width={300}
+                        height={400}
                         className="h-24 md:h-40 lg:h-52 w-full rounded-lg object-cover shadow-md"
                     />
                 </div>

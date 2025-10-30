@@ -3,7 +3,7 @@
    *=>aceternity:  https://ui.aceternity.com/components -->
 
 git add .
-git commit -m "improve speed - rm unneeded stuff"
+git commit -m "change website to main data"
 git push -u origin main
  
  
