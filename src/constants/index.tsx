@@ -245,7 +245,7 @@ export const projectsData = [
         description:
             "Built a detailed Power BI dashboard to analyze online sales performance, profit margins, and customer behavior across multiple regions. Helped identify top-selling products, improve pricing strategies, and optimize marketing efforts through interactive visual insights.",
         tools: ["Power BI", "DAX", "Excel", "SQL"],
-        img: "https://github.com/KalyanM45/E-Commerce-Data-Analysis/blob/main/E-Commerce%20Data%20Analysis_page.jpg?raw=true",
+        img: "/images/e-commerce-data.webp",
         link: "https://github.com/abdullahfuture/E-Commerce-Data-Analysis",
     },
 
