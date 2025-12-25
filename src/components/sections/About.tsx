@@ -109,7 +109,7 @@ const SkeletonFour = () => {
             {/* make the image full width & height */}
             <Image
                 fill
-                src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
+                src="https://lpsonline.sas.upenn.edu/sites/default/files/2022-10/plpso-feratures-data-business.jpg"
                 alt="avatar"
                 className="rounded-3xl absolute inset-0  w-full h-full object-cover"
             />
